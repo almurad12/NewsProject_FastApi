@@ -3,6 +3,9 @@
 2.	Activate virtual environment (myenv) then install requirments.txt
 3.	Then go to news_api_app and run this project uvicorn app.main:app --reload using this command
 4.	You can get full swagger documentation http://127.0.0.1:8000/docs this url
+
+
+
 *Login
 POST /login
 Description: Authenticates a user and returns a token.
@@ -17,6 +20,8 @@ Response (JSON):
   "token_type": "bearer"
 }
 
+
+
 *Registration
 Description: Registers a new user.
 Request Body (JSON):
@@ -25,6 +30,8 @@ Request Body (JSON):
   "password": "securepassword",
   "email": "user@example.com"
 }
+
+
 *GET /users/me
 Description: Retrieves the currently authenticated user.
 Authorization: Bearer Token (JWT) required.
@@ -48,6 +55,8 @@ Response (JSON):
   ]
 }
 
+
+
 *POST /news/save-latest
 Description: Fetches the latest news from an external API and saves it to the database.
 Response (JSON):
@@ -65,6 +74,7 @@ Response (JSON):
   "status": "ok",
   "articles": [...]
 }
+
 *GET /news/headlines/source/{source_id}
 Description: Get top headlines from a specific news source.
 Path Parameter:
